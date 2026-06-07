@@ -771,6 +771,19 @@
   margin: 0 auto;
 }
 
+@media (max-width: 1200px) {
+  .education-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 968px) {
+  .education-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .education-grid { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 480px) {
+  .education-grid { grid-template-columns: 1fr !important; }
+}
+
 .education-card {
   padding: 2.2rem;
   border-radius: var(--border-radius-md);
@@ -860,12 +873,23 @@
 /* Certifications Grid & Cards */
 .certifications-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc((100% - 8rem) / 5), 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
 }
+
+@media (max-width: 1200px) {
+  .certifications-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 968px) {
+  .certifications-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .certifications-grid { grid-template-columns: 1fr !important; }
+}
+
 
 .cert-card {
   display: flex;
