@@ -81,27 +81,45 @@
 
 /* Responsive Drawer */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
   .menu-toggle {
     display: block;
-    z-index: 1001;
+    z-index: 1002;
   }
 
   .nav-links {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 280px;
+    width: min(300px, 80vw);
     height: 100vh;
     background: var(--bg-secondary);
     border-left: 1px solid var(--card-border);
     flex-direction: column;
     justify-content: center;
-    gap: 3rem;
-    transition: var(--transition-normal);
-    z-index: 1000;
+    gap: 2.5rem;
+    transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1001;
+    padding: 2rem;
+    backdrop-filter: blur(20px);
+    box-shadow: -10px 0 40px rgba(0,0,0,0.4);
   }
 
   .nav-links.active {
     right: 0;
+  }
+
+  .nav-item a {
+    font-size: 1.1rem;
+    padding: 0.6rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo {
+    font-size: 1.2rem;
   }
 }

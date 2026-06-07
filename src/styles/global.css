@@ -383,29 +383,44 @@ button, input, textarea, select {
 /* Responsive Grid */
 .grid-cols-2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc((100% - 2.5rem) / 2), 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem;
   width: 100%;
 }
 
 .grid-cols-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc((100% - 4rem) / 3), 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   width: 100%;
 }
 
+/* Section padding */
+.section {
+  padding: 6rem 2rem;
+}
+
 @media (max-width: 968px) {
   .section {
-    padding: 4rem 1rem;
+    padding: 4rem 1.5rem;
   }
   .grid-cols-3 {
-    grid-template-columns: repeat(auto-fit, minmax(calc((100% - 2rem) / 2), 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .grid-cols-2, .grid-cols-3 {
-    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  .section {
+    padding: 3rem 1rem;
+  }
+  .grid-cols-2,
+  .grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 2.5rem 0.8rem;
   }
 }
