@@ -89,14 +89,17 @@
 /* ── Hamburger button — hidden on desktop ── */
 .menu-toggle {
   display: none;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
   background: none;
   border: 1px solid var(--card-border);
   color: var(--text-main);
   cursor: pointer;
-  padding: 0.4rem;
   border-radius: 8px;
   transition: border-color 0.2s, background 0.2s;
-  line-height: 0;
+  flex-shrink: 0;
 }
 
 .menu-toggle:hover {
@@ -147,8 +150,6 @@
   /* Show hamburger */
   .menu-toggle {
     display: flex;
-    align-items: center;
-    justify-content: center;
     z-index: 1002;
   }
 
