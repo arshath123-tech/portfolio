@@ -139,6 +139,12 @@
 @media (max-width: 968px) {
   .navbar {
     padding: 0 1.2rem;
+    height: 70px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .navbar.scrolled {
+    height: 70px;
   }
 
   .nav-logo,
