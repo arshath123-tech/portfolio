@@ -138,6 +138,12 @@
     padding: 0 1.2rem;
   }
 
+  .nav-logo,
+  .nav-controls {
+    position: relative;
+    z-index: 1002;
+  }
+
   /* Show hamburger */
   .menu-toggle {
     display: flex;

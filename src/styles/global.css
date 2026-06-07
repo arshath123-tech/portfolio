@@ -217,6 +217,7 @@ button, input, textarea, select {
 
 /* Section Common Structure */
 .section {
+  scroll-margin-top: var(--header-height);
   padding: 6rem 1.5rem;
   max-width: var(--max-width);
   margin: 0 auto;
