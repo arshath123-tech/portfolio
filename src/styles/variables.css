@@ -1,0 +1,76 @@
+:root {
+  /* Colors */
+  --bg-primary: #0b0f19;
+  --bg-secondary: #111827;
+  --bg-tertiary: #1f2937;
+  --card-bg: rgba(17, 24, 39, 0.7);
+  --card-border: rgba(255, 255, 255, 0.08);
+  
+  --accent-primary: #06b6d4;      /* Neon Cyan */
+  --accent-primary-rgb: 6, 182, 212;
+  --accent-secondary: #8b5cf6;    /* Electric Purple */
+  --accent-secondary-rgb: 139, 92, 246;
+  --accent-glow: rgba(6, 182, 212, 0.15);
+  
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --text-dark: #6b7280;
+  
+  --success: #10b981;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+
+  /* Typography */
+  --font-display: 'Outfit', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Layout */
+  --header-height: 80px;
+  --max-width: 100%;
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Shadows */
+  --glow-cyan: 0 0 20px rgba(var(--accent-primary-rgb), 0.3);
+  --glow-purple: 0 0 20px rgba(var(--accent-secondary-rgb), 0.3);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Color Accent Themes */
+:root, .theme-cyan {
+  --accent-primary: #06b6d4;      /* Neon Cyan */
+  --accent-primary-rgb: 6, 182, 212;
+  --accent-secondary: #8b5cf6;    /* Electric Purple */
+  --accent-secondary-rgb: 139, 92, 246;
+  --accent-glow: rgba(6, 182, 212, 0.15);
+}
+
+.theme-pink {
+  --accent-primary: #ec4899;      /* Cyber Pink */
+  --accent-primary-rgb: 236, 72, 153;
+  --accent-secondary: #f59e0b;    /* Cyber Orange */
+  --accent-secondary-rgb: 245, 158, 11;
+  --accent-glow: rgba(236, 72, 153, 0.15);
+}
+
+.theme-green {
+  --accent-primary: #10b981;      /* Emerald Green */
+  --accent-primary-rgb: 16, 185, 129;
+  --accent-secondary: #06b6d4;    /* Neon Cyan */
+  --accent-secondary-rgb: 6, 182, 212;
+  --accent-glow: rgba(16, 185, 129, 0.15);
+}
+
+.theme-orange {
+  --accent-primary: #f97316;      /* Sunset Orange */
+  --accent-primary-rgb: 249, 115, 22;
+  --accent-secondary: #ec4899;    /* Cyber Pink */
+  --accent-secondary-rgb: 236, 72, 153;
+  --accent-glow: rgba(249, 115, 22, 0.15);
+}
