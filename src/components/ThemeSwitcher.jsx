@@ -35,18 +35,7 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <div 
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: '0.6rem',
-        background: 'rgba(255, 255, 255, 0.03)',
-        padding: '0.4rem 0.7rem',
-        borderRadius: '30px',
-        border: '1px solid var(--card-border)',
-        marginLeft: '1rem'
-      }}
-    >
+    <div className="theme-switcher-wrap">
       <Award size={14} style={{ color: 'var(--text-muted)', opacity: 0.7 }} title="Select Theme Color" />
       <div style={{ display: 'flex', gap: '0.4rem' }}>
         {THEMES.map((theme) => (

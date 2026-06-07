@@ -37,7 +37,15 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [location]);
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  // Close drawer when clicking outside (overlay)
+  const closeMenu = () => setMenuOpen(false);
+  const toggleMenu = () => setMenuOpen(prev => !prev);
+
+  // Prevent body scroll when drawer is open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
 
   const handleNavClick = (sectionId) => {
     setMenuOpen(false);
@@ -55,37 +63,65 @@ const Navbar = () => {
     { id: 'skills',         label: 'Skills' },
     { id: 'projects',       label: 'Projects' },
     { id: 'experience',     label: 'Experience' },
-    { id: 'certifications', label: 'Certifications' },
+    { id: 'certifications', label: 'Certs' },
     { id: 'contact',        label: 'Contact' },
   ];
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <div className="nav-logo" onClick={() => handleNavClick('home')} style={{ cursor: 'pointer' }}>
-        <span>Portfolio</span>
-        <span style={{ fontSize: '0.6rem', padding: '0.2rem 0.4rem', borderRadius: '4px', background: 'rgba(6, 182, 212, 0.1)', color: 'var(--accent-primary)', border: '1px solid rgba(6, 182, 212, 0.2)' }}>Dev</span>
-      </div>
+    <>
+      {/* Dark overlay when drawer is open */}
+      <div
+        className={`nav-overlay ${menuOpen ? 'active' : ''}`}
+        onClick={closeMenu}
+        aria-hidden="true"
+      />
 
-      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-        <ThemeSwitcher />
-        <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
+      <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+        {/* Logo */}
+        <div className="nav-logo" onClick={() => handleNavClick('home')}>
+          <span>Portfolio</span>
+          <span style={{
+            fontSize: '0.6rem',
+            padding: '0.2rem 0.4rem',
+            borderRadius: '4px',
+            background: 'rgba(6, 182, 212, 0.1)',
+            color: 'var(--accent-primary)',
+            border: '1px solid rgba(6, 182, 212, 0.2)',
+            WebkitTextFillColor: 'var(--accent-primary)',
+          }}>Dev</span>
+        </div>
 
-      <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
-        {navItems.map((item) => (
-          <li
-            key={item.id}
-            className={`nav-item ${activeSection === item.id ? 'active' : ''}`}
+        {/* Desktop nav links */}
+        <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
+          {navItems.map((item) => (
+            <li
+              key={item.id}
+              className={`nav-item ${activeSection === item.id ? 'active' : ''}`}
+            >
+              <a
+                href={`#${item.id}`}
+                onClick={(e) => { e.preventDefault(); handleNavClick(item.id); }}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Right side: theme switcher + hamburger */}
+        <div className="nav-controls">
+          <ThemeSwitcher />
+          <button
+            className="menu-toggle"
+            onClick={toggleMenu}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
           >
-            <a href={`#${item.id}`} onClick={(e) => { e.preventDefault(); handleNavClick(item.id); }}>
-              {item.label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+            {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
+      </nav>
+    </>
   );
 };
 
