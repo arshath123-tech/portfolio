@@ -530,39 +530,27 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .certifications-grid {
+    grid-template-columns: repeat(auto-fit, minmax(calc((100% - 4rem) / 3), 1fr));
+  }
+}
+
+@media (max-width: 968px) {
+  .education-grid {
+    grid-template-columns: repeat(auto-fit, minmax(calc((100% - 2rem) / 2), 1fr));
+  }
+  .certifications-grid {
+    grid-template-columns: repeat(auto-fit, minmax(calc((100% - 2rem) / 2), 1fr));
+  }
+}
+
 @media (max-width: 768px) {
+  .education-grid, .certifications-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
   .cert-card {
-    padding: 0.8rem;
-  }
-  .cert-title {
-    font-size: 0.8rem;
-  }
-  .cert-issuer {
-    font-size: 0.7rem;
-  }
-  .project-content {
-    padding: 0.8rem;
-  }
-  .project-content h3 {
-    font-size: 0.9rem;
-  }
-  .project-tag {
-    font-size: 0.6rem;
-    padding: 0.1rem 0.3rem;
-  }
-  .education-card {
-    padding: 1rem;
-  }
-  .education-degree {
-    font-size: 1rem;
-  }
-  .education-icon-wrapper, .cert-icon-wrapper {
-    width: 30px;
-    height: 30px;
-  }
-  .education-icon-wrapper svg, .cert-icon-wrapper svg {
-    width: 16px;
-    height: 16px;
+    padding: 1.5rem;
   }
 }
 
