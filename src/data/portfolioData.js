@@ -152,7 +152,7 @@ export const CERTIFICATIONS = [
     title: 'NPTEL Certificates in Java, DSA, CN, DBMS',
     issuer: 'IIT Madrass',
     date: '2025-2026',
-    credentialUrl: 'https://example.com/java-certificate-link',
+    credentialUrl: 'https://drive.google.com/drive/folders/1DpXp5dr9YvM-XqK2N15xIMY8AFYuNfzO?usp=sharing',
     description: 'Completed NPTEL courses in Java Programming, Data Structures & Algorithms, Computer Networks, and Database Management Systems with top grades.',
   },
   {
@@ -160,7 +160,7 @@ export const CERTIFICATIONS = [
     title: 'Web Development Certificate',
     issuer: 'Learnflu',
     date: '2025',
-    credentialUrl: 'https://example.com/react-certificate-link',
+    credentialUrl: 'https://drive.google.com/file/d/1Dst-C3YMOb6zftmcjW3sUbrcUc2DGqzv/view?usp=sharing',
     description: 'Completed a comprehensive web development course covering HTML, CSS, JavaScript, and React.js, building multiple projects to demonstrate proficiency.',
   },
   {
@@ -168,7 +168,7 @@ export const CERTIFICATIONS = [
     title: 'Web Development Workshop Certificate',
     issuer: 'EDEN PIXEL',
     date: '2025',
-    credentialUrl: 'https://example.com/react-certificate-link',
+    credentialUrl: 'https://drive.google.com/file/d/1WaNiVmYXxmP_1cIeLN23e0zY6r1dWfsM/view?usp=sharing',
     description: 'Completed a comprehensive web development course covering HTML, CSS, JavaScript, and React.js, building multiple projects to demonstrate proficiency.',
   }
 
