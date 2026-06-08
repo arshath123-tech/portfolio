@@ -25,13 +25,13 @@ export const PERSONAL_INFO = {
 
 export const SKILLS = [
   { name: 'Java',            category: 'Backend',  level: 90 },
-  { name: 'React.js',        category: 'Frontend', level: 88 },
+  { name: 'React.js',        category: 'Frontend', level: 75 },
   { name: 'HTML5 & CSS3',    category: 'Frontend', level: 95 },
   { name: 'JavaScript',      category: 'Frontend', level: 85 },
-  { name: 'Spring Boot',     category: 'Backend',  level: 80 },
-  { name: 'MySQL',           category: 'Database', level: 78 },
+  { name: 'Spring Boot',     category: 'Backend',  level: 50 },
+  { name: 'MySQL',           category: 'Database', level: 80 },
   { name: 'Git & GitHub',    category: 'Tools',    level: 85 },
-  { name: 'REST APIs',       category: 'Backend',  level: 88 },
+  { name: 'Tailwind CSS',    category: 'Frontend', level: 50 },
 
   // ── ADD A NEW SKILL ──
   // { name: 'Docker',       category: 'Tools',    level: 70 },
