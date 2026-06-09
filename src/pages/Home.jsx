@@ -32,7 +32,7 @@ const GithubIcon = ({ size = 16 }) => (
 
 const TITLES = [
   'Software Developer',
-  'Java Specialist',
+  'Java Enthusiast',
   'React Creator',
   
 ];
