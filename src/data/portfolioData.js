@@ -54,7 +54,7 @@ export const PROJECTS = [
       'Recreated the Swiggy food delivery interface with restaurant cards, hero banner, and responsive navigation bar Leveraged CSS Flexbox and Grid for pixel-perfect layout consistency across screen sizes',
     longDescription:
       'Recreated the Swiggy food delivery interface with restaurant cards, hero banner, and responsive navigation bar Leveraged CSS Flexbox and Grid for pixel-perfect layout consistency across screen sizes',
-    technologies: ['HTML', 'CSS'],
+    technologies: ['React.js', 'HTML', 'CSS', 'JavaScript'],
     liveUrl: 'https://swiggy-clone-eight-lake.vercel.app/',
     githubUrl: 'https://github.com/arshath123-tech/Swiggy-clone',
   },
