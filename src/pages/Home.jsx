@@ -97,8 +97,9 @@ const Home = () => {
     const els = document.querySelectorAll('.animate-on-scroll');
     els.forEach((el) => observer.observe(el));
     return () => els.forEach((el) => observer.unobserve(el));
-  }, []);
+  }, [activeCategory]);
 
+ 
   const handleFormChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleFormSubmit = async (e) => {

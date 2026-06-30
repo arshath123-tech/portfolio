@@ -18,7 +18,7 @@ const Footer = () => {
         </ul>
 
         <p className="footer-text">
-          &copy; {currentYear} Developer Portfolio. Built with MERN Stack. All rights reserved.
+          &copy; {currentYear} Developer Portfolio. Built with React Js. All rights reserved.
         </p>
       </div>
     </footer>
