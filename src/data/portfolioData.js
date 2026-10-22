@@ -61,7 +61,7 @@ export const PROJECTS = [
   {
     id: 2,
     title: 'TIC-TAC-TOE Game ',
-    image: tictactoe, // Use the imported image variable instead of a string path
+    image: tictactoe, 
     description:
       'Engineered a fully interactive browser-based game with win detection, draw logic, and animated transitions Structured game state using JavaScript ES6 and manipulated the DOM dynamically for real-time UI updates.',
     longDescription:
@@ -79,7 +79,7 @@ export const PROJECTS = [
     longDescription:
       'Designed an AI-powered health chatbot using JavaScript and HTML/CSS that provides personalized health advice, symptom checking, and wellness tips through an intuitive conversational interface.',
     technologies: ['HTML', 'CSS', 'JavaScript'],
-    liveUrl: 'https://arshath123-tech.github.io/health_chatbot/',
+    liveUrl: 'https://mentalhhealthchatbot.netlify.app/',
     githubUrl: 'https://github.com/arshath123-tech/health_chatbot',
   },
 
